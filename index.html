@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio | Jhonier Montaño</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Jhonier Montaño</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>¡Hola! Soy Jhonier</h1>
+      <p>Desarrollador en formación, enfocado en crear experiencias funcionales y modernas</p>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="container">
+    <h2 class="section-title">Sobre mí</h2>
+    <p class="text-center">
+      Soy estudiante del SENA con pasión por el desarrollo web. Trabajo con HTML y CSS creando proyectos sencillos pero funcionales y bien diseñados. Me enfoco en seguir aprendiendo y creciendo como profesional.
+    </p>
+    <div class="text-center skills">
+      <i class="fab fa-html5 text-danger"></i>
+      <i class="fab fa-css3-alt text-primary"></i>
+    </div>
+  </section>
+
+  <section id="proyectos" class="container">
+    <h2 class="section-title">Proyectos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4 class="card-title">M&C Grúas</h4>
+          <p class="card-text">
+            Sitio web profesional diseñado con HTML, CSS y Bootstrap para una empresa de transporte y grúas.
+          </p>
+          <a href="https://github.com/jhoniermc/MYC-Gruas" class="btn btn-dark" target="_blank">
+            <i class="fab fa-github"></i> Ver en GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="container">
+    <h2 class="section-title">Contacto</h2>
+    <p class="text-center">¿Te interesa mi trabajo? ¡Conecta conmigo!</p>
+    <div class="text-center">
+      <a href="https://github.com/jhoniermc" class="btn btn-outline-dark m-2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/jhoniermc" class="btn btn-outline-primary m-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="comentarios" class="container">
+    <h2 class="section-title">Deja tu comentario</h2>
+    <div class="comment-box">
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="comentario" class="form-label">Comentario</label>
+          <textarea class="form-control" id="comentario" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p class="text-center">&copy; 2025 Jhonier Montaño. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
