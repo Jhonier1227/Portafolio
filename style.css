@@ -1,44 +1,67 @@
+:root {
+  --primary-color: #1e1e1e;
+  --secondary-color: #007bff;
+  --highlight-color: #ffffff;
+  --accent-color: #f7f7f7;
+}
+
 body {
-    background-color: #f0f2f5;
-    color: #000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .navbar {
-    background-color: #000;
-  }
-  .navbar-brand, .nav-link {
-    color: #fff !important;
-  }
-  .hero {
-    background: linear-gradient(135deg, #ff0000, #0000ff);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-  }
-  .section-title {
-    text-align: center;
-    margin: 60px 0 30px;
-    font-weight: 700;
-  }
-  .skills i {
-    font-size: 50px;
-    margin: 15px;
-  }
-  .card {
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  footer {
-    background-color: #000;
-    color: white;
-    padding: 30px 0;
-  }
-  .comment-box {
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--highlight-color) !important;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg, #000000, #1e1e1e);
+  color: var(--highlight-color);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  margin: 60px 0 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.skills i {
+  font-size: 50px;
+  margin: 15px;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--highlight-color);
+  padding: 30px 0;
+}
+
+.comment-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-outline-dark, .btn-outline-primary {
+  border-radius: 30px;
+}
