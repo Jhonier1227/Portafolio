@@ -3,23 +3,100 @@
   --secondary-color: #007bff;
   --highlight-color: #ffffff;
   --accent-color: #f7f7f7;
+
+  --dark-bg: #121212;
+  --dark-text: #e0e0e0;
+  --light-bg: #ffffff;
+  --light-text: #1e1e1e;
+}
+
+.hero-section {
+  background: url('/images/FondoPor.png') center/cover no-repeat;
+  min-height: 100vh;
+  padding: 80px 0;
+  color: var(--highlight-color);
+  position: relative;
+}
+
+.logo-inicio {
+  animation: fadeInLeft 1s ease-out;
+}
+
+/* Animación suave para el logo */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* MODO OSCURO (clase aplicada al body) */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.fondo-personalizado {
+  background: url('/images/AnimJhon.jpg') center/cover no-repeat;
+  color: var(--highlight-color);
+  background: linear-gradient(135deg, #000000, #1e1e1e);
+}
+
+
+body.dark-mode .card,
+body.dark-mode .form-card {
+  background-color: #1e1e1e;
+  color: var(--dark-text);
+}
+
+body.dark-mode .section-title {
+  color: var(--highlight-color);
 }
 
 body {
   background-color: var(--accent-color);
   color: var(--primary-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
 }
 
-.navbar {
+/* NAVBAR */
+.navbar, .custom-navbar {
   background-color: var(--primary-color);
+  padding: 10px 0;
+  animation: fadeDown 1s ease-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand span {
+  font-size: 1rem;
+  color: var(--highlight-color);
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.nav-link {
   color: var(--highlight-color) !important;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
+.nav-link:hover {
+  color: #ff0000 !important;
+}
+
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #000000, #1e1e1e);
   color: var(--highlight-color);
@@ -27,6 +104,7 @@ body {
   text-align: center;
 }
 
+/* SECCIONES */
 .section-title {
   text-align: center;
   margin: 60px 0 30px;
@@ -34,11 +112,7 @@ body {
   color: var(--primary-color);
 }
 
-.skills i {
-  font-size: 50px;
-  margin: 15px;
-}
-
+/* TARJETAS PROYECTOS */
 .card {
   border: none;
   border-radius: 20px;
@@ -51,52 +125,77 @@ body {
   transform: translateY(-5px);
 }
 
+.proyectos-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.proyecto-card {
+  flex-shrink: 0;
+  width: 320px;
+  min-height: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* HABILIDADES */
+.skills i {
+  font-size: 50px;
+  margin: 15px;
+}
+
+/* FORMULARIO CONTACTO */
+.form-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeUp 1s ease;
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  transform: scale(1.02);
+}
+
+.contacto-info {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  height: 100%;
+}
+
+/* FOOTER */
 footer {
   background-color: var(--primary-color);
   color: var(--highlight-color);
   padding: 30px 0;
 }
 
-.comment-box {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.btn-outline-dark, .btn-outline-primary {
-  border-radius: 30px;
-}
-
-/* Estilo general del navbar */
-/* Navbar personalizado */
-.custom-navbar {
-  background-color: #000;
-  padding: 10px 0;
-  animation: fadeDown 1s ease-out;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Estilo del nombre y logo */
-.custom-navbar .navbar-brand span {
-  font-size: 1rem;
-  color: #fff;
-}
-
-/* Estilo de los enlaces */
-.custom-navbar .nav-link {
-  color: #fff !important;
-  font-weight: 500;
-  font-size: 0.95rem;
+footer a {
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
-.custom-navbar .nav-link:hover {
-  color: #ff0000 !important;
+footer a:hover {
+  color: #ff0000;
 }
 
-/* Animación suave de entrada */
+/* BOTONES */
+.btn-outline-dark,
+.btn-outline-primary,
+.btn-dark {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+/* ANIMACIONES */
 @keyframes fadeDown {
   0% {
     opacity: 0;
@@ -106,4 +205,25 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL DEL CARRUSEL DE PROYECTOS */
+.proyectos-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.proyectos-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
 }

@@ -63,17 +63,28 @@
       </div>
     </nav>
   </header>
-<br>
-<br>
-<br>
-  <!-- HERO -->
-  <section id="inicio" class="hero text-center py-5">
+
+  <!-- Inicio -->
+  <section id="inicio" class="hero-section d-flex align-items-center">
     <div class="container">
-      <h2 class="display-4 fw-bold">¡Hola! Soy Jhonier</h2>
-      <p class="lead">Desarrollador web enfocado en crear experiencias limpias, modernas y funcionales.</p>
-      <a href="#proyectos" class="btn btn-danger mt-3">Ver proyectos</a>
+      <div class="row align-items-center">
+        
+        <!-- Columna izquierda: Logo -->
+        <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+          <img src="ruta/a/tu-logo.png" alt="Logo personal" class="img-fluid logo-inicio" style="max-width: 250px;">
+        </div>
+  
+        <!-- Columna derecha: Mensaje principal -->
+        <div class="col-md-6 text-white text-center text-md-start">
+          <h2 class="display-4 fw-bold">¡Hola! Soy Jhonier</h2>
+          <p class="lead">Desarrollador web enfocado en crear experiencias limpias, modernas y funcionales.</p>
+          <a href="#proyectos" class="btn btn-danger mt-3">Ver proyectos</a>
+        </div>
+  
+      </div>
     </div>
   </section>
+  
 
 <!-- SOBRE MÍ CON IMAGEN DE FONDO -->
 <section id="sobre-mi" class="py-5 position-relative text-white" style="background-image: url('/images/AnimJhon.jpg'); background-size: cover; background-position: center;">
@@ -113,35 +124,180 @@
 
 
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="py-5">
-    <div class="container">
-      <h3 class="text-center mb-4">Proyectos</h3>
-      <div class="row" id="proyectos-lista">
-        <!-- Aquí irán las tarjetas de los proyectos -->
+<section id="proyectos" class="container my-5">
+  <h2 class="section-title text-center mb-4">Proyectos destacados</h2>
+
+  <!-- Contenedor del carrusel -->
+  <div class="proyectos-carrusel d-flex gap-4 overflow-auto px-3 py-4">
+
+    <!-- Proyecto 1 -->
+    <div class="card proyecto-card flex-shrink-0 shadow-lg rounded-4 d-flex flex-row" style="min-width: 600px; max-width: 700px; height: 250px; background: #1c1c1c; color: #fff;">
+      <!-- Imagen lateral -->
+      <img src="/imgPro/LogoGrua1.png" class="img-fluid rounded-start" alt="Miniatura M&C Grúas" style="width: 40%; object-fit: cover;">
+    
+      <!-- Contenido -->
+      <div class="card-body d-flex flex-column justify-content-between p-3">
+        <div>
+          <h5 class="card-title fw-bold">M&C Grúas</h5>
+          <p class="card-text mb-2">Sitio web profesional para empresa de transporte y grúas. Desarrollado con HTML, CSS, JavaScript y Bootstrap.</p>
+          <p class="mb-1"><strong>Tecnologías:</strong></p>
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="badge bg-danger">HTML</span>
+            <span class="badge bg-primary">CSS</span>
+            <span class="badge bg-success">JavaScript</span>
+            <span class="badge bg-dark">Bootstrap</span>
+          </div>
+        </div>
+        <a href="https://github.com/Jhonier1227/MCgruas" target="_blank" class="btn btn-outline-light mt-2 w-100">
+          <i class="fab fa-github"></i> Ver en GitHub
+        </a>
       </div>
     </div>
-  </section>
+  
+    <!-- Aquí puedes duplicar más proyectos -->
+
+  </div>
+</section>
+
+<section id="habilidades" class="py-5" style="background-color: #121212; color: #fff;">
+  <div class="container">
+    <h2 class="section-title text-center text-white mb-5">Habilidades</h2>
+
+    <!-- Habilidades técnicas -->
+    <h4 class="text-center mb-4">Técnicas</h4>
+    <div class="row justify-content-center text-center mb-5">
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fab fa-html5 fa-3x text-danger mb-2"></i>
+        <h5 class="fw-bold">HTML5</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fab fa-css3-alt fa-3x text-primary mb-2"></i>
+        <h5 class="fw-bold">CSS3</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fab fa-js-square fa-3x text-warning mb-2"></i>
+        <h5 class="fw-bold">JavaScript</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fab fa-bootstrap fa-3x text-info mb-2"></i>
+        <h5 class="fw-bold">Bootstrap</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fab fa-php fa-3x text-secondary mb-2"></i>
+        <h5 class="fw-bold">PHP</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fas fa-database fa-3x text-light mb-2"></i>
+        <h5 class="fw-bold">MySQL</h5>
+      </div>
+    </div>
+
+    <!-- Habilidades blandas -->
+    <h4 class="text-center mb-4">Blandas</h4>
+    <div class="row justify-content-center text-center">
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fas fa-users fa-3x text-warning mb-2"></i>
+        <h5 class="fw-bold">Trabajo en equipo</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fas fa-comments fa-3x text-info mb-2"></i>
+        <h5 class="fw-bold">Comunicación</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fas fa-lightbulb fa-3x text-success mb-2"></i>
+        <h5 class="fw-bold">Resolución de problemas</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fas fa-hourglass-half fa-3x text-danger mb-2"></i>
+        <h5 class="fw-bold">Gestión del tiempo</h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <i class="fas fa-brain fa-3x text-primary mb-2"></i>
+        <h5 class="fw-bold">Pensamiento crítico</h5>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
   <!-- CONTACTO -->
-  <section id="contacto" class="bg-light py-5">
+  <section id="contacto" class="py-5 bg-light">
     <div class="container">
-      <h3 class="text-center mb-4">Contacto</h3>
-      <div class="text-center">
-        <p>¿Te gustaría trabajar conmigo o tienes alguna pregunta?</p>
-        <a href="mailto:correo@ejemplo.com" class="btn btn-primary">Enviar correo</a>
+      <h2 class="text-center mb-4 section-title">Contacto</h2>
+      <p class="text-center mb-5">¿Tienes un proyecto, idea o simplemente quieres saludar? ¡Estoy disponible para colaborar!</p>
+  
+      <div class="row">
+        <!-- Columna izquierda: Formulario -->
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="tucorreo@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="asunto" class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="asunto" placeholder="Motivo del mensaje">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Enviar mensaje</button>
+          </form>
+        </div>
+  
+        <!-- Columna derecha: Información -->
+        <div class="col-md-6 d-flex flex-column justify-content-center px-4">
+          <h4 class="fw-bold mb-3">Información de contacto</h4>
+          <p><strong>Email:</strong> jhonierstivenmontanocastillo@gmail.com</p>
+          <p><strong>Ubicación:</strong> Colombia</p>
+          <p><strong>Disponibilidad:</strong> Tiempo completo</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="https://github.com/Jhonier1227" target="_blank"><i class="fab fa-github fa-2x text-dark"></i></a>
+            <a href="https://www.linkedin.com/in/jhonier-stiven-monta%C3%B1o-castillo-610271346/" target="_blank"><i class="fab fa-linkedin fa-2x text-primary"></i></a>
+            <!-- Agrega otros íconos si los necesitas -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  
+  
 
   <!-- FOOTER -->
-  <footer class="text-center py-4 bg-dark text-white">
-    <p class="mb-1">&copy; 2025 Jhonier Montaño</p>
-    <div>
-      <a href="https://github.com/Jhonier1227" target="_blank" class="text-white me-3"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/jhonier-stiven-monta%C3%B1o-castillo-610271346/" target="_blank" class="text-white"><i class="fab fa-linkedin"></i></a>
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="#inicio" class="text-white mx-2 text-decoration-none">Inicio</a>
+        <a href="#sobre-mi" class="text-white mx-2 text-decoration-none">Sobre mí</a>
+        <a href="#proyectos" class="text-white mx-2 text-decoration-none">Proyectos</a>
+        <a href="#habilidades" class="text-white mx-2 text-decoration-none">Habilidades</a>
+        <a href="#contacto" class="text-white mx-2 text-decoration-none">Contacto</a>
+      </div>
+      <div class="mb-2">
+        <a href="https://github.com/Jhonier1227" target="_blank" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.linkedin.com/in/jhonier-stiven-monta%C3%B1o-castillo-610271346/" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+      <p class="mb-0 small">&copy; 2025 Jhonier Stiven Montaño Castillo. Todos los derechos reservados.</p>
     </div>
   </footer>
-
+  
 </body>
 </html>
