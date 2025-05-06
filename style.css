@@ -238,6 +238,35 @@ body {
   transform: scale(1.02);
 }
 
+
+.proyectos-carrusel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem 0;
+  scroll-padding-left: 1rem;
+}
+
+.proyecto-card {
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+  border: none;
+  background: linear-gradient(to bottom right, #1c1c1c, #2a2a2a);
+}
+
+.proyecto-card:hover {
+  transform: scale(1.02);
+}
+
+.proyecto-card img {
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+
 .contacto-info {
   padding: 2rem;
   background-color: #f1f1f1;
@@ -306,3 +335,36 @@ footer a:hover {
   background-color: #888;
   border-radius: 10px;
 }
+
+
+
+.progress-bar {
+  transition: width 1.5s ease-in-out;
+}
+
+.transition-hover {
+  transition: color 0.3s ease;
+}
+
+.transition-hover:hover {
+  color: #0dcaf0 !important; /* Azul Bootstrap para resaltar */
+  text-decoration: underline;
+}
+
+#btn-top{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #0dcaf0;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+
