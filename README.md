@@ -35,9 +35,10 @@ El objetivo de este proyecto es tener una presencia digital sólida, permitir qu
 
 ---
 
-## 📷 Vista previa
-
-![Portafolio Jhonier Preview](https://ruta-de-tu-imagen-de-previa.com) <!-- Cambia esto por la URL real de tu screenshot si la tienes -->
+## 📷 Logo Personal
+<p align="center">
+ <img src="https://jhonier1227.github.io/Portafolio/assets/images/LogoJH.png" alt="Logo M&C Grúas" width="300" />
+</p>
 
 ---
 
@@ -63,7 +64,7 @@ Durante el desarrollo de este portafolio he consolidado mis conocimientos en des
 
 ## 📌 ¿Cómo ver el portafolio?
 
-Puedes verlo en línea aquí 👉 [https://jhonier1227.github.io](https://jhonier1227.github.io) *(actualiza con tu enlace si ya está publicado)*
+Puedes verlo en línea aquí 👉 [Portafolio](https://jhonier1227.github.io/Portafolio/) 
 
 ---
 
