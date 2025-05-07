@@ -109,5 +109,5 @@ AOS.init({
     });
   });
 
-
-  
+  console.log("Ancho del body:", document.body.scrollWidth);
+  console.log("Ancho de la ventana:", window.innerWidth);

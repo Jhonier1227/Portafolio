@@ -10,6 +10,19 @@
   --light-text: #1e1e1e;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px; /* Para compensar la altura del navbar */
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
 .hero-section {
   background: url('../assets/images/FondoPor.png') center/cover no-repeat;
   min-height: 100vh;
@@ -40,6 +53,15 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.proyectos-carrusel::-webkit-scrollbar {
+  height: 6px;
+}
+.proyectos-carrusel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
 
 .hero-logo {
   flex: 1 1 40%;
