@@ -11,7 +11,7 @@
 }
 
 .hero-section {
-  background: url('/assets/images/FondoPor.png') center/cover no-repeat;
+  background: url('assets/images/FondoPor.png') center/cover no-repeat;
   min-height: 100vh;
   padding: 80px 0;
   color: var(--highlight-color);
@@ -101,7 +101,7 @@ body.dark-mode {
   display: flex;
   align-items: center;
   position: relative;
-  background: url('/assets/images/FondoPor.png') center/cover no-repeat;
+  background: url('assets/images/FondoPor.png') center/cover no-repeat;
 }
 
 #sobre-mi h3 {
