@@ -10,17 +10,12 @@
   --light-text: #1e1e1e;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 section {
   scroll-margin-top: 100px; /* Para compensar la altura del navbar */
 }
 
-html, body {
-  overflow-x: hidden;
-}
+
 
 
 .hero-section {
@@ -32,6 +27,7 @@ html, body {
   overflow: hidden;
   display: flex;
   align-items: center;
+  
 }
 
 .hero-section::before {
@@ -52,7 +48,11 @@ html, body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+  max-width: 100%;
+  overflow-x: hidden;
+  }
+  
+
 
 .proyectos-carrusel::-webkit-scrollbar {
   height: 6px;
@@ -61,6 +61,8 @@ html, body {
   background-color: #888;
   border-radius: 4px;
 }
+
+
 
 
 .hero-logo {
