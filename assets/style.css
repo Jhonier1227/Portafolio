@@ -1,16 +1,16 @@
-*{
+/* Reset de márgenes y paddings */
+* {
   padding: 0%;
 }
 
-
-
-
-
+/* ============================
+   VARIABLES GLOBALES (modo claro/oscuro)
+   ============================ */
 :root {
-  --primary-color: #1e1e1e;
-  --secondary-color: #007bff;
-  --highlight-color: #ffffff;
-  --accent-color: #f7f7f7;
+  --primary-color: #1e1e1e;      /* Color base oscuro */
+  --secondary-color: #007bff;    /* Azul Bootstrap */
+  --highlight-color: #ffffff;    /* Blanco para textos en fondos oscuros */
+  --accent-color: #f7f7f7;       /* Fondo suave claro */
 
   --dark-bg: #121212;
   --dark-text: #e0e0e0;
@@ -18,14 +18,16 @@
   --light-text: #1e1e1e;
 }
 
-
+/* ============================
+   SCROLL COMPENSACIÓN POR NAVBAR
+   ============================ */
 section {
-  scroll-margin-top: 100px; /* Para compensar la altura del navbar */
+  scroll-margin-top: 100px;
 }
 
-
-
-
+/* ============================
+   HERO SECTION
+   ============================ */
 .hero-section {
   background: url('../assets/images/FondoPor.png') center/cover no-repeat;
   min-height: 100vh;
@@ -35,7 +37,6 @@ section {
   overflow: hidden;
   display: flex;
   align-items: center;
-  
 }
 
 .hero-section::before {
@@ -44,8 +45,8 @@ section {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* sombra oscura */
-  backdrop-filter: blur(4px);     /* desenfoque */
+  background: rgba(0, 0, 0, 0.5); /* Sombra oscura */
+  backdrop-filter: blur(4px);     /* Desenfoque */
   z-index: 1;
 }
 
@@ -58,20 +59,7 @@ section {
   flex-wrap: wrap;
   max-width: 100%;
   overflow-x: hidden;
-  }
-  
-
-
-.proyectos-carrusel::-webkit-scrollbar {
-  height: 6px;
 }
-.proyectos-carrusel::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-
-
 
 .hero-logo {
   flex: 1 1 40%;
@@ -103,12 +91,11 @@ section {
   font-size: 1.2rem;
 }
 
-
+/* Animación de entrada para logo */
 .logo-inicio {
   animation: fadeInLeft 1s ease-out;
 }
 
-/* Animación suave para el logo */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -120,32 +107,13 @@ section {
   }
 }
 
-
-/* MODO OSCURO (clase aplicada al body) */
+/* ============================
+   MODO OSCURO
+   ============================ */
 body.dark-mode {
   background-color: var(--dark-bg);
   color: var(--dark-text);
 }
-
-#sobre-mi {
-  min-height: 100vh;
-  padding: 100px 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-  background: url('../assets/images/FondoPor.png') center/cover no-repeat;
-}
-
-#sobre-mi h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #fff;
-  z-index: 2;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-}
-
-
 
 body.dark-mode .card,
 body.dark-mode .form-card {
@@ -157,6 +125,9 @@ body.dark-mode .section-title {
   color: var(--highlight-color);
 }
 
+/* ============================
+   CONFIGURACIÓN GENERAL
+   ============================ */
 body {
   background-color: var(--accent-color);
   color: var(--primary-color);
@@ -164,7 +135,9 @@ body {
   transition: all 0.3s ease;
 }
 
-/* NAVBAR */
+/* ============================
+   NAVBAR
+   ============================ */
 .navbar, .custom-navbar {
   background-color: var(--primary-color);
   padding: 10px 0;
@@ -195,12 +168,35 @@ body {
   color: #ff0000 !important;
 }
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #000000, #1e1e1e);
-  color: var(--highlight-color);
-  padding: 100px 20px;
+/* ============================
+   SOBRE MÍ SECTION
+   ============================ */
+#sobre-mi {
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: url('../assets/images/FondoPor.png') center/cover no-repeat;
+}
+
+#sobre-mi h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ============================
+   SECCIONES Y TITULOS
+   ============================ */
+.section-title {
   text-align: center;
+  margin: 60px 0 30px;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .sobre-mi-section {
@@ -214,28 +210,15 @@ body {
   transform: translateY(0);
 }
 
-
-/* SECCIONES */
-.section-title {
-  text-align: center;
-  margin: 60px 0 30px;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-/* TARJETAS PROYECTOS */
+/* ============================
+   TARJETAS DE PROYECTOS
+   ============================ */
 .card {
   border: none;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transition: all 0.3s ease-in-out;
   background-color: #ffffff;
-}
-
-.proyecto-card:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
 }
 
 .card:hover {
@@ -254,15 +237,60 @@ body {
   width: 320px;
   min-height: 100%;
   transition: transform 0.3s ease;
+  border: none;
+  background: linear-gradient(to bottom right, #1c1c1c, #2a2a2a);
+  scroll-snap-align: start;
 }
 
-/* HABILIDADES */
+.proyecto-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.proyecto-card img {
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.proyectos-carrusel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem 0;
+  scroll-padding-left: 1rem;
+}
+
+.proyectos-carrusel::-webkit-scrollbar {
+  height: 6px;
+}
+.proyectos-carrusel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* SCROLL DEL CONTENEDOR */
+.proyectos-container::-webkit-scrollbar {
+  height: 8px;
+}
+.proyectos-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+/* ============================
+   HABILIDADES
+   ============================ */
 .skills i {
   font-size: 50px;
   margin: 15px;
 }
 
-/* FORMULARIO CONTACTO */
+/* ============================
+   FORMULARIO DE CONTACTO
+   ============================ */
 .form-card {
   background-color: #ffffff;
   padding: 2rem;
@@ -276,35 +304,6 @@ body {
   transform: scale(1.02);
 }
 
-
-.proyectos-carrusel {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 2rem 0;
-  scroll-padding-left: 1rem;
-}
-
-.proyecto-card {
-  scroll-snap-align: start;
-  transition: transform 0.3s ease;
-  border: none;
-  background: linear-gradient(to bottom right, #1c1c1c, #2a2a2a);
-}
-
-.proyecto-card:hover {
-  transform: scale(1.02);
-}
-
-.proyecto-card img {
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
-
 .contacto-info {
   padding: 2rem;
   background-color: #f1f1f1;
@@ -312,7 +311,9 @@ body {
   height: 100%;
 }
 
-/* FOOTER */
+/* ============================
+   FOOTER
+   ============================ */
 footer {
   background-color: var(--primary-color);
   color: var(--highlight-color);
@@ -328,7 +329,9 @@ footer a:hover {
   color: #ff0000;
 }
 
-/* BOTONES */
+/* ============================
+   BOTONES
+   ============================ */
 .btn-outline-dark,
 .btn-outline-primary,
 .btn-dark {
@@ -341,7 +344,9 @@ footer a:hover {
   border-color: #ff0000;
 }
 
-/* ANIMACIONES */
+/* ============================
+   ANIMACIONES GLOBALES
+   ============================ */
 @keyframes fadeDown {
   0% {
     opacity: 0;
@@ -364,32 +369,10 @@ footer a:hover {
   }
 }
 
-/* SCROLL DEL CARRUSEL DE PROYECTOS */
-.proyectos-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.proyectos-container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-}
-
-
-
-.progress-bar {
-  transition: width 1.5s ease-in-out;
-}
-
-.transition-hover {
-  transition: color 0.3s ease;
-}
-
-.transition-hover:hover {
-  color: #0dcaf0 !important; /* Azul Bootstrap para resaltar */
-  text-decoration: underline;
-}
-
-#btn-top{
+/* ============================
+   BOTÓN IR ARRIBA
+   ============================ */
+#btn-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -405,4 +388,17 @@ footer a:hover {
   z-index: 999;
 }
 
+/* ENLACES CON TRANSICIÓN */
+.transition-hover {
+  transition: color 0.3s ease;
+}
 
+.transition-hover:hover {
+  color: #0dcaf0 !important;
+  text-decoration: underline;
+}
+
+/* PROGRESS BARS */
+.progress-bar {
+  transition: width 1.5s ease-in-out;
+}
